@@ -1,0 +1,129 @@
+Business class om business rules zoals minimale leeftijd vast te leggen:
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Text;
+
+namespace ConsoleApp52
+
+{
+
+//creates class Business
+
+class Business
+
+{
+
+//creates a field
+
+public int leeftijd;
+
+//create a class constructor for the Business class
+
+public Business()
+
+{
+
+leeftijd = 20;
+
+}
+
+}
+
+}
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Text;
+
+Check class om te controleren of persoon oud genoeg is met aanroep naar business role minimale leeftijd:
+
+namespace ConsoleApp52
+
+{
+
+class check
+
+{
+
+public static void OudGenoeg(int a)
+
+{
+
+Business Person = new Business();//create an object of the Business class
+
+int minLeeftijdPerson = Person.leeftijd;
+
+if (a >= minLeeftijdPerson)
+
+{
+
+Console.WriteLine("Je bent oud genoeg");
+
+}
+
+else
+
+{
+
+Console.WriteLine("Je bent te jong");
+
+}
+
+}
+
+}
+
+}
+
+Program class om de code uit te voeren met aanroep van check leeftijd.
+
+using System;
+
+namespace ConsoleApp52
+
+{
+
+class Program
+
+{
+
+static void Main(string[] args)
+
+{
+
+int i = 0;
+
+try
+
+{
+
+while (i < 5)
+
+{
+
+Console.WriteLine("Wat is je leeftijd?");
+
+int age = Convert.ToInt32(Console.ReadLine());
+
+{
+
+check.OudGenoeg(age);
+
+i++;
+
+}
+
+}
+
+}
+
+catch (Exception)
+
+{
+
+Console.WriteLine("Geen goede invoer"
